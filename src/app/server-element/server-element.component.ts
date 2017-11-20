@@ -7,7 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ServerElementComponent implements OnInit {
 
-  @Input('srvElement')
+  // can alias this by @Input('myAlias') -- the @Input means I can access this from the parent (in this case app.component.html)
+  @Input()
   element: { type: string, name: string, content: string }; // this defines the type
 
   constructor() { }
